@@ -17,3 +17,13 @@ def sales_reports(log_file):
 #call the function
 sales_reports(log_file)
 
+log_file = open("um-server-01.txt")
+def over_ten(log_file):
+    for line in log_file:  
+        line = line.rstrip()
+        inputs = line.split(':')
+        inputs2 = int(line[16:18])
+        if inputs2 > 10:
+            print(line)
+
+over_ten(log_file)
